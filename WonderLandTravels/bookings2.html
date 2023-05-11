@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta >
+    <title>create account</title>
+    <style>
+        body{
+            background-image: linear-gradient(135deg,#68f00e  ,#0d72f5  );
+        }
+        input:focus {
+
+            font-size: 150%;
+        }
+        input:hover {
+            background-color: red;
+
+        }
+        button  {
+            background-color: yellow;
+            font-size: 150%;
+            border-radius: 10px;
+        }
+         
+        span{
+            color: rgb(133, 16, 16);
+
+        }
+
+        /* glass filter */
+        .container {
+             
+            /* background-image: linear-gradient(135deg,#f00e6c  ,#0df581  ); */
+            width: 300px;
+             
+            border-radius: 25px;
+            padding: 90px;
+            margin: 100px;
+            margin-left: 400px; 
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, .15);
+            
+            backdrop-filter: blur(5px);
+          }
+          img{
+            margin-top:10px;
+            width: 40px;
+            height: 30px;
+          }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="form"   action="bookings2.html" method="post">
+           <label  >CARD TYPE : <br><br>
+            <input type="radio" name="ra1" id="ra1" required > <img src="main_page_images/mastercard.png" alt="">
+            <input type="radio" name="ra1" id="ra1" required > <img src="main_page_images/visa.png" alt="">
+            <input type="radio" name="ra1" id="ra1" required > <img src="main_page_images/americanexpress.png" alt="">
+            <input type="radio" name="ra1" id="ra1" required > <img src="main_page_images/paypal.png" alt="">
+        
+            </label>  <br> <br>
+           <label  >CARD number : <input type="text" name="cnum" id="cnum"  placeholder="1234 5678 8268" required></label>  <br> <br>
+           <label  >CVV number : <br><input type="text" name="cvv" id="cvv" placeholder="123" required></label> <br> <br> 
+            
+           <label  >  ENTER AMOUNT:<br><input type="text" name="amt" id="pname2"   > </label> <br><br>
+            
+             
+            <button type="submit"  >PAYNOW</button>
+        </form>
+      </div>
+
+     
+
+
+</body>
+</html>

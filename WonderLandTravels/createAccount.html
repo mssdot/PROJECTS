@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta >
+    <title>create account</title>
+    <style>
+        body{
+            background-image: linear-gradient(135deg,#68f00e  ,#0d72f5  );
+        }
+        input:focus {
+
+            font-size: 150%;
+        }
+        input:hover {
+            background-color: red;
+
+        }
+        button  {
+            background : linear-gradient(45deg,blue,deeppink);
+            font-size: 150%;
+            border-radius: 10px;
+        }
+         
+        span{
+            color: rgb(133, 16, 16);
+
+        }
+
+        /* glass filter */
+        .container {
+             
+            /* background-image: linear-gradient(135deg,#f00e6c  ,#0df581  ); */
+            width: 300px;
+             
+            border-radius: 25px;
+            padding: 90px;
+            margin: 100px;
+            margin-top: 10px;
+            margin-left: 400px; 
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, .15);
+            
+            backdrop-filter: blur(5px);
+          }
+
+    </style>
+</head>
+<body>
+    <h1 style="margin-left: 500px;margin-top: 20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">create account</h1>
+    <div class="container">
+        <form id="form"   action="createAccount.php" method="post">
+           <label  >firstname : <input type="text" name="uname1" id="uname1"  ></label>  <br><span id="uerror"></span> <br><br>
+           <label  >lastname : <input type="text" name="uname2" id="uname2"  ></label>  <br><span id="uerror2"></span> <br><br>
+           <label  >email : <br><input type="text" name="mail" id="mail" placeholder="abc123@gmail.com" ></label> <br><span id="eerror"></span><br><br>
+           <label  >password : <input type="password" name="pname" id="pname"></label><br><span id="perror"> </span><br><br>
+           <label  >Re-enter Password:<input type="password" name="pname2" id="pname2" > </label><br><span id="pverror"></span><br/><br>
+           <label  >Phone Number : <input type="text" name="pno" id="pno"   ></label><br> <span id="merror"></span><br><br> 
+            <input type="checkbox" id="cbox">I agree to  the policy <br> <span id="cerror"> </span>  <br><br>
+            <button type="submit"  >submit</button> 
+        </form>  <br>   
+       
+            <a href="mainpage.php"> <button  class="btn btn-secondary" >BACK</button> </a> 
+      </div>
+      
+
+    <script>
+        let form = document.getElementById("form");
+        form.addEventListener( "submit", (event) =>{
+            event.preventDefault();
+            validateForm();
+        });
+        function validateForm(){
+
+
+            let uname = document.getElementById("uname1").value.trim();
+            let uname2 = document.getElementById("uname2").value.trim();
+            let mail = document.getElementById("mail").value.trim();
+            let pname = document.getElementById("pname").value.trim();
+            let pvname = document.getElementById("pname2").value.trim();
+            let pno = document.getElementById("pno").value.trim();
+            let c  = document.getElementById("cbox").checked ;
+            var u=true;
+            var u2=true;
+            var eml=true;
+            var p=true;
+            var m=true;
+            if( uname == ""){
+                 document.getElementById("uerror").innerText = "name cant be null";
+                 u = false;
+
+            }
+            /*if(!isNaN(uname)){
+                document.getElementById("uerror").innerText = "Name can't be a Number";
+                 a = false;
+            }*/
+            else if(!uname.match(/[a-z A-Z]/)){
+                document.getElementById("uerror").innerText = "Name must be a alphabet";
+                 u = false;
+
+
+            }
+            else if(uname.length <3){
+                document.getElementById("uerror").innerText = "Length can't less than 3 characters";
+                 u = false;
+
+            }
+            
+            else{
+                document.getElementById("uerror").innerText =" ";
+                
+            }
+            if( uname2 == ""){
+              document.getElementById("uerror2").innerText = "name cant be null";
+              u2 = false;
+
+            }
+            /*if(!isNaN(uname)){
+                document.getElementById("uerror").innerText = "Name can't be a Number";
+                a = false;
+            }*/
+            else if(!uname2.match(/[a-z A-Z]/)){
+                document.getElementById("uerror2").innerText = "Name must be a alphabet";
+                u2 = false;
+
+
+            }
+            else if(uname2.length <3){
+                document.getElementById("uerror2").innerText = "Length can't less than 3 characters";
+                u2 = false;
+
+            }
+            else{
+              document.getElementById("uerror2").innerText =" ";
+            }
+            let username =/([a-z A-Z 0-9 _ - \.])+@([a-z A-Z \. -])+\.([a-z ]{3})$/;
+            //let domain= /[a-z A-Z \. -]+/;
+            //let extension =/[a-z{3}]/;
+            if(mail ==""){
+                document.getElementById("eerror").innerText = "email can't be empty";
+                 eml = false;
+
+            }
+
+            else if(!mail.match(username)){
+                document.getElementById("eerror").innerText = "Invalid Email";
+                 eml = false;
+
+            }
+
+            else{
+                document.getElementById("eerror").innerText = " ";
+            }
+            if(pname ==""){
+                document.getElementById("perror").innerText = "password can't be empty";
+                 p = false;
+
+            }
+            else if(pname.length <8 ){
+                document.getElementById("perror").innerText = "password can't less than 8 characters";
+                 p = false;
+
+            }
+            else if(!pname.match(/[a-z ]/)){
+                document.getElementById("perror").innerText = "password has atleast one small case letter";
+                 p = false;
+
+            }
+            else if(!pname.match(/[A-Z ]/)){
+                document.getElementById("perror").innerText = "password has atleast one upper case letter";
+                 p = false;
+
+            }
+            else if(!pname.match(/[0-9 ]/)){
+                document.getElementById("perror").innerText = "password has atleast one numeric value";
+                 p = false;
+
+            }
+            else if(!pname.match(/[@ $ & - # \.  ]/)){
+                document.getElementById("perror").innerText = "password has atleast one of following special characters   : @ $ & - #  .  ";
+                 p = false;
+
+            }
+            else{
+                document.getElementById("perror").innerText = " ";
+                if(pvname==""){
+                    document.getElementById("pverror").innerText = "password verification can't be empty";
+                    p = false;
+
+                }
+
+                else if(pname != pvname){
+                    document.getElementById("pverror").innerText = "password   can't be MATCHED";
+                    p = false;
+
+
+                }
+                else{
+                    document.getElementById("pverror").innerText = " ";
+                }
+            }
+
+            if(pno ==""){
+                document.getElementById("merror").innerText = "Mobile NUmber can't be empty";
+                 m = false;
+
+            }
+            else if( pno.match(/[a-z A-Z]/)){
+                document.getElementById("merror").innerText = "Mobile Number Contains only Numbers";
+                 m = false;
+
+            }
+            else if( pno.length!=10){
+                document.getElementById("merror").innerText = "Mobile Number should be 10 digits";
+                 m = false;
+            }
+
+            else if(!pno.match(/[6-9][0-9]{9}/)){
+                document.getElementById("merror").innerText = "Mobile Number is Invalid";
+                 m = false;
+
+            }
+            else{
+                document.getElementById("merror").innerText = " ";
+            }
+
+
+
+
+
+            if( !c) {
+                document.getElementById("cerror").innerText = ": Checkbox must be clicked";
+                c = false;
+            }
+            else{
+                document.getElementById("cerror").innerText = " " ;
+            }
+
+            if(u && eml && p && m && c && u2){
+                form.submit();
+            }
+
+
+
+
+
+
+
+        }
+    </script>
+
+
+
+
+</body>
+</html>

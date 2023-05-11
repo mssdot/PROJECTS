@@ -1,0 +1,40 @@
+<html>
+
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/
+    jquery/3.3.1/jquery.min.js"></script>
+ 
+</head>
+
+<body>
+ <!-- click on this button -->
+ <button>Click Me!</button>
+ <br>
+ <br>
+ <div id="d1" style="width:50px;height:50px;display:
+    none;background-color:lightgreen;"></div>
+ <br>
+ <div id="d2" style="width:50px;height:50px;display:
+    none;background-color:green;"></div>
+ <br>
+ <div id="d3" style="width:50px;height:50px;display:
+    none;background-color:orange;"></div>
+ <br>
+ <div id="d4" style="width:50px;height:50px;display:
+    none;background-color:yellow;"></div>
+ <br>
+<script src="bootstrap/js/jquery3.6.1min.js"></script>
+ <script>
+   
+    $(document).ready(function() {
+     $("button").click(function() {
+      $("#d1").delay("slow").fadeIn();
+      $("#d2").delay("fast").fadeIn();
+      $("#d3").delay(1000).fadeIn();
+      $("#d4").delay(4000).fadeIn();
+     });
+    });
+   </script>
+</body>
+
+</html>

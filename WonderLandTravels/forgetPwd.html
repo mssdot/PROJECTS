@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome-5.8.1.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/mdb.css">
+    <link rel="stylesheet" href="main_page_style.css">
+    <title>FORGOT pASSWORD</title>
+    <link rel="icon" href="main_page_images/wl.jpg">
+    <style>
+      .container {
+             
+             background-image: linear-gradient(135deg,#f00e6c  ,#0df581  );  
+             width: 500px;  
+             border-radius: 25px;
+             padding: 90px;
+             margin: 100px;
+             margin-left: 400px; 
+             box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+             border-radius: 15px;
+             background-color: rgba(255, 255, 255, .15);
+             
+             backdrop-filter: blur(5px);
+           }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form  action="forgetPwd.php" method="post" id="form">
+            <fieldset  > 
+              <legend>Forget Password</legend>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="pno" required>
+              </div>
+              <div class="mb-3">
+                <label for="pname" class="form-label">Set New Password</label>
+                <input type="password" class="form-control" id="pname" name="pwd" id="pname" r >
+                <span id="perror"></span>
+              </div>
+              <div class="mb-3">
+                <label for="pname2" class="form-label">Re Enter Password</label>
+                <input type="password" class="form-control" id="pname2" name="pname2"  >
+
+                <span id="pverror"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+               
+    
+            </fieldset>
+        </form>
+        <a href="mainpage.php"> <button  class="btn btn-secondary" >BACK</button> </a> 
+         
+    </div>
+    
+
+
+<!-- Bootstrap JS files -->
+<script src="bootstrap/js/jquery.js"></script>
+<script src="bootstrap/js/popper.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="bootstrap/js/mdb.js"></script>
+<script>
+  let form = document.getElementById("form");
+  form.addEventListener( "submit", (event) =>{
+      event.preventDefault();
+      validateForm();
+  });
+  function validateForm(){
+
+
+   
+      let pname = document.getElementById("pname").value.trim();
+      let pvname = document.getElementById("pname2").value.trim();
+       
+      var p=true;
+       
+       
+      if(pname ==""){
+          document.getElementById("perror").innerText = "password can't be empty";
+           p = false;
+
+      }
+      else if(pname.length <8 ){
+          document.getElementById("perror").innerText = "password can't less than 8 characters";
+           p = false;
+
+      }
+      else if(!pname.match(/[a-z ]/)){
+          document.getElementById("perror").innerText = "password has atleast one small case letter";
+           p = false;
+
+      }
+      else if(!pname.match(/[A-Z ]/)){
+          document.getElementById("perror").innerText = "password has atleast one upper case letter";
+           p = false;
+
+      }
+      else if(!pname.match(/[0-9 ]/)){
+          document.getElementById("perror").innerText = "password has atleast one numeric value";
+           p = false;
+
+      }
+      else if(!pname.match(/[@ $ & - # \.  ]/)){
+          document.getElementById("perror").innerText = "password has atleast one of following special characters   : @ $ & - #  .  ";
+           p = false;
+
+      }
+      else{
+          document.getElementById("perror").innerText = " ";
+          if(pvname==""){
+              document.getElementById("pverror").innerText = "password verification can't be empty";
+              p = false;
+
+          }
+
+          else if(pname != pvname){
+              document.getElementById("pverror").innerText = "password   can't be MATCHED";
+              p = false;
+
+
+          }
+          else{
+              document.getElementById("pverror").innerText = " ";
+          }
+      }
+
+      
+
+      if( p  ){
+          form.submit();
+      }
+
+
+
+
+
+
+
+  }
+</script>
+
+
+</body>
+</html>
