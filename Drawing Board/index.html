@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch Board</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <div class="container"  >
+        <div>
+            <div class="drawingBoard">
+                <canvas></canvas>
+            </div>
+            <div class="actionbuttons">
+                <button class="btn undo-board">Undo</button>
+                <button class="btn redo-board">Redo</button>
+                <button class="btn save-board">Save</button>
+                <button class="btn clear-board">Clear Board</button>
+                
+            </div>
+        </div>
+        <div class="tool-section">
+            <div class="row tool-container">
+                <label class="title">Options</label>
+                <ul class="options">
+                    <li class="option active tool" id="brush">
+                        <img src="./icons/brush.svg" alt="">
+                        <span>Brush</span>
+                    </li>
+                    <li class="option   tool" id="eraser">
+                        <img src="./icons/erasor.svg" alt="">
+                        <span>Erasor</span>
+                    </li>
+                    <li class="option" >
+                       <input type="range" id="size-slider" min="1" max="30" value="5">
+                    </li>
+
+                </ul>
+            </div>
+        
+
+            <div class="row tool-container">
+                <label class="title">Shapes</label>
+                <ul class="options">
+                    <li class="option   tool" id="rectangle">
+                        <img src="./icons/rectangle.png" id="re" alt="">
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="option   tool" id="circle">
+                        <img src="./icons/circle.png" id="cr" alt="">
+                        <span>Circle</span>
+                    </li>
+                    <li class="option" id="traingle" >
+                        <img src="./icons/triangle.png" id="tr" alt="">
+                        <span>Traiangle</span>               
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fillcolor">
+                        <label for="fillcolor">Fill Color</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="row colors tool-container">
+                <label class="title">Colors</label>
+                <ul class="options">
+                    <li class="option"></li> 
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option">
+                        <input type="color" id="colorPicker">
+                    </li>
+                </ul>
+            </div>
+            <div class="row   tool-container">
+                <label class="title">Resize</label>
+                <ul class="options">
+                    <li class="option tool" id="zoomin">
+                        <span>Zoom In</span>
+                    </li> 
+                    <li class="option tool" id="zoomout">
+                        <span>Zoom Out</span>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+    </div> 
+ 
+</body>
+</html>
