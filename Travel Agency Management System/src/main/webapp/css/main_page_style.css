@@ -1,0 +1,141 @@
+/*main ppage page css */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.bg-teal , .btn-teal{
+    background-color: #27ddde !important;
+}
+.text-teal{
+    color: #27ddde !important;
+}
+.bg-dark , .btn-dark{
+    background: linear-gradient(45deg,black,darkslategrey) !important;
+}
+.btn{
+    border-radius: 50px;
+}
+
+/* -------------------- Landing page section ------------------- */
+.landing-section{
+    background: white url("main_page_images/allwonders.jpeg") no-repeat scroll center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+.landing-wrapper{
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+}
+.landing-wrapper h1{
+    font-size: 60px;
+}
+.landing-wrapper p{
+    font-size: 20px;
+}
+.fa-play-circle{
+    color: #27ddde;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    animation: glow-icon 0.8s infinite linear;
+}
+@keyframes glow-icon {
+    0% , 100%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(1.07,1.07);
+        box-shadow: 0 0 20px rgb(255, 255, 255);
+        border: 3px dashed white;
+    }
+}
+
+/* ----------------- Intro Section --------------- */
+.icon1 , .locdiv{
+	background-color: black;
+	width: 80px ; 
+	height: 80px ;
+	 
+    
+    color: #27ddde;
+    border-radius: 50%;
+    box-shadow: 0 0 3px black;
+}
+.locdiv{
+	margin-left:125px;
+}
+/* -------------------- Gallery Section --------------- */
+.gallery-img{
+    border-radius: 50px;
+    border: 5px solid #27ddde !important;
+    box-shadow: 0 0 10px black;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.gallery-img:hover{
+    transform: scale(1.05,1.05);
+}
+/* -------------- Learn More Section -------------- */
+.btn-outline-white{
+    border: 2px solid #27ddde !important;
+}
+.btn-outline-white:hover{
+    border: 2px solid #27ddde !important;
+    color: #27ddde !important;
+    box-shadow: 0 0 10px #27ddde !important;
+}
+/* ----------------- Trainers Section ------------- */
+.trainer-img{
+    box-shadow: 0 0 10px #27ddde;
+    margin-top: -50px;
+    background-image:  linear-gradient(45deg,rgb(10, 236, 131),rgb(205, 148, 216)) ;
+}
+.trainer-card{
+    border-radius: 10px !important;
+    transition: all 0.5s;
+    background-image:  linear-gradient(45deg,rgb(10, 236, 131),rgb(205, 148, 216)) ;
+}
+.trainer-card:hover{
+    transform: translateY(-20px);
+    background: linear-gradient(45deg,black,darkslategrey) !important;
+    color: #27ddde !important;
+    box-shadow: 0 0 10px hsl(180, 73%, 51%);
+}
+.google-map{
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+/* ------------- Tour Images Section ------------*/
+.tour-image{
+    border-radius: 10px;
+    box-shadow: 0 15px 15px black;
+}
+ 
+.logo-img{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    margin-top: -5px;
+    box-shadow: 0 0 3px black;
+} 
+#login{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    margin-top: -5px;
+    box-shadow: 0 0 3px black;
+} 
+
+a{
+    color: #020303;
+}
+
+/*main ppage page css */
+.modelcolor{
+    background: linear-gradient(45deg,#27ddde,deeppink);
+}
