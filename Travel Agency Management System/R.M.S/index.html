@@ -1,0 +1,344 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="java.sql.*"  %>  
+<%@ taglib  uri="http://java.sun.com/jsp/jstl/sql"  prefix="sql"  %>  
+<%@ taglib  uri="http://java.sun.com/jsp/jstl/core"  prefix="c"  %> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.M.S</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome-5.8.1.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/mdb.css">
+    <link rel="stylesheet" href="main_page_style.css">
+    <style>
+      .t{
+        text-align: center;
+        position: absolute;
+        left: 50px;
+
+
+      }
+
+    </style>  
+</head>
+<body>
+<div class="header">
+    <div id="navbar">
+        <a href="login.html">Login</a>
+        <a href="#home">Contact</a>
+        <a href="#home">About</a>
+        <a href="#home">Home</a>
+        
+        <b href=#login>R.M.S</b>
+        
+        
+    </div>
+
+
+
+    
+<section class="articles">
+    <article>
+        <div class="article-wrapper">
+        <figure>
+            <img src="mi/tatasumo.jpg" alt="" />
+        </figure>
+        <div class="article-body">
+            <h2>Tata Sumo</h2>
+            <table class="t" >
+              <tr>
+                <th>TYPE</th>
+                <th>CPK</th>
+                <th>CPH</th>
+
+              </tr>
+              <tr>
+                <td>AC</td>
+                <td>2</td>
+                <td>3</td>
+
+              </tr>
+              <tr>
+                <td>AC</td>
+                <td>2</td>
+                <td>3</td>
+
+              </tr>
+
+
+            </table>
+            
+            
+        </div>
+        </div>
+    </article>
+    <article>
+    
+        <div class="article-wrapper">
+        <figure>
+            <img src="mi/mahindra-armada-render-featured.jpg" alt="" />
+        </figure>
+        <div class="article-body">
+            <h2>Mahindhra-Armada</h2>
+            
+            <ul class="card-list">
+
+                <li >
+                  
+
+                  <span >4 People</span>
+                </li>
+
+                <li >
+                  <span >Diesel</span>
+                </li>
+
+                <li >
+                 
+
+                  <span >19km / 1-litre</span>
+                </li>
+
+                <li >
+                 
+
+                  <span >Manual</span>
+                </li>
+
+              </ul>
+            <a href="#" class="read-more">
+           Rent Out<span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            </a>
+        </div>
+        </div>
+    </article>
+    <article>
+    
+        <div class="article-wrapper">
+        <figure>
+            <img src="mi/maruti-suzuki-omni.jpg" alt="" />
+        </figure>
+        <div class="article-body">
+            <h2>Maruthi-Omni</h2>
+            
+            <ul class="card-list">
+
+                <li >
+
+                  <span >4 People</span>
+                </li>
+
+                <li >
+
+                  <span>Diesel</span>
+                </li>
+
+                <li>
+
+                  <span >18km / 1-litre</span>
+                </li>
+
+                <li>
+                  Manual
+                </li>
+
+              </ul>
+            <a href="#" class="read-more">
+           Rent Out<span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            </a>
+        </div>
+        </div>
+    </article>
+    <article>
+    
+        <div class="article-wrapper">
+        <figure>
+            <img src="mi/eesteeem.jpeg" alt="" />
+        </figure>
+        <div class="article-body">
+            <h2>Maruthi-Esteem</h2>
+            
+            <ul class="card-list">
+
+                <li >
+                  <span >4 People</span>
+                </li>
+
+                <li >
+                <span >Diesel</span>
+                </li>
+                <li >
+                <span >11km / 1-litre</span>
+                </li>
+                <li >
+                  <span >Manual</span>
+                </li>
+
+              </ul>
+
+            <a href="#" class="read-more">
+           Rent Out<span class="sr-only">about this is some title</span>
+            <svg xmlns="" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            </a>
+        </div>
+        </div>
+    </article>
+    <article>
+    
+        <div class="article-wrapper">
+        <figure>
+            <img src="mi/ambassador.jpg" alt="" />
+        </figure>
+        <div class="article-body">
+            <h2>Ambassador</h2>
+            
+            <ul class="card-list">
+
+                <li >
+                  <span >4 People</span>
+                </li>
+
+                <li >
+                <span >Diesel</span>
+                </li>
+                <li >
+                  <span >15km / 1-litre</span>
+                </li>
+                <li >
+                  <span >Manual</span>
+                </li>
+              </ul>
+         
+            <a href="#" class="read-more">
+           Rent Out<span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            </a>
+        </div>
+        </div>
+    </article>
+    <article>
+    
+        <div class="article-wrapper">
+        <figure>
+            <img src="mi/innova.webp" alt="" />
+        </figure>
+        <div class="article-body">
+            <h2>Innova Crysta</h2>
+            
+            <ul class="card-list">
+
+                <li >
+                  
+
+                  <span >7 People</span>
+                </li>
+
+                <li >
+
+                  <span >Diesel</span>
+                </li>
+
+                <li >
+                
+
+                  <span >10km / 1-litre</span>
+                </li>
+
+                <li >
+                <span >Manual</span>
+                </li>
+
+              </ul>
+            
+            <a href="#" class="read-more">
+           Rent Out<span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            </a>
+        </div>
+        </div>
+    </article>
+  </section>
+
+
+
+
+
+
+
+  
+  <footer class="footer-distributed">
+  
+        <div class="footer-left">
+  
+          <h3 ><span>R.M.S</span></h3>
+  
+          <p class="footer-links">
+            <a href="#"> Home</a>
+            ·
+            <a href="#">  Pricing</a>
+            ·
+            <a href="#">  About</a>
+            ·
+            <a href="#">  Contact</a>
+          </p>
+  
+          <p class="footer-company-name">A simple and elegant software for Rental Management</p>
+  
+          <div class="footer-icons">
+  
+            <a href="https://www.facebook.com/"><img src="mi/fb.png" alt="facebook logo" width="40px" ></a>
+            <a href="https://www.github.com/"><img src="mi/gitlogo.png" alt="github logo" width="40px" ></a>
+            <a href="https://www.linkedin.com/"><img  src="mi/linkeddd.png" alt="linked in logo" width="40px" ></a>
+            <a href="https://www.twitter.com/"><img src="mi/twitt.png" alt="twitter" width="40px" ></a>
+  
+          </div>
+  
+        </div>
+  
+        <div class="footer-right">
+  
+          <p>Contact Us</p>
+  
+          <form action="#" method="post">
+  
+            <input type="text" name="email" placeholder="Email">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button>Send</button>
+  
+          </form>
+  
+        </div>
+  
+      </footer>
+  
+
+
+
+
+<!-- Bootstrap JS files -->
+<script src="bootstrap/js/jquery.js"></script>
+<script src= "bootstrap/js/popper.js"></script>
+<script src= "bootstrap/js/bootstrap.js"></script>
+<script src= "bootstrap/js/mdb.js"></script>
+ 
+</body>
+</html>
