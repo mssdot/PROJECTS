@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ec824bae0c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+     <div class="container">
+        <div class="left">
+            <label  > <i class="fa-brands fa-html5 fa-beat-fade" style="color: #eb4135;"></i>HTML</label>
+            <textarea   id="htmlcode" onkeyup="run()"    spellcheck="false"></textarea>
+       
+            <label  > <i class="fa-brands fa-css3-alt fa-beat-fade" style="color: #4a98f7;"></i>CSS</label>
+            <textarea   id="csscode" onkeyup="run()" spellcheck="false" ></textarea>
+       
+            <label  ><i class="fa-brands fa-js fa-beat" style="color: #f36918;"></i>JS</label>
+            <textarea   id="jscode" onkeyup="run()" spellcheck="false"></textarea>
+       
+        </div>
+        <div class="right">
+            <label   ><i class="fa-solid fa-play" style="color: #48dd01;"></i>Output</label>
+            <iframe   id="output"></iframe>
+        </div>
+     </div>
+
+
+     <script>
+        function run(){
+            let htmlcode = document.getElementById("htmlcode").value;
+            let csscode= document.getElementById("csscode").value;
+            let jscode = document.getElementById("jscode").value;
+            let output = document.getElementById("output");
+
+            output.contentDocument.body.innerHTML = htmlcode + "<style>" + csscode + "</style>";
+            output.contentWindow.eval(jscode)
+
+
+        }
+     </script>
+</body>
+</html>
